@@ -1,0 +1,16 @@
+
+
+/* Footer / Contact
+  ---------------------------------- */
+  footer.contact {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: var(--spacing-6) 1rem;
+  }
+
+  footer.contact h2 {
+    font-size: var(--font-size-600);
+    margin-bottom: var(--spacing-3);
+    color: var(--color-secondary);
+  }

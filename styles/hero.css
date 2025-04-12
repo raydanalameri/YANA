@@ -1,0 +1,89 @@
+  /* Section Hero
+  ---------------------------------- */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px; /* pour éviter la superposition sous le header */
+    background-color: var(--color-secondary);
+    text-align: center;
+    z-index: 1;
+  }
+
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../cyber-law.webp') center center / cover no-repeat;
+    transform: scale(1.02);
+    filter: blur(3px) brightness(0.5);
+    z-index: -3;
+  }
+
+  
+   /* H1 Styles */
+
+  
+  /* H1 Styles */
+#hero-heading {
+    font-size: var(--font-size-1000);
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    /* Start with tight letter spacing */
+    letter-spacing: 0.001em;
+    transition: letter-spacing 0.8s ease;
+  }
+  
+  /* When revealed, the letter spacing increases smoothly */
+  #hero-heading.reveal {
+    letter-spacing: 0.1em;
+  }
+  
+  /* The extra letters (parts of the full words) */
+  .yana__word {
+    display: inline-block;
+    opacity: 0;
+    /* Slight vertical offset to animate from below */
+    transform: translateY(0.1em);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  /* When the reveal state is triggered, show the extra letters */
+  #hero-heading.reveal .yana__word {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+  #hero p {
+    color: #f0f0f0;
+    font-size: var(--font-size-500);
+    margin-bottom: var(--spacing-4);
+    max-width: 600px;
+  }
+
+  .btn-hero {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-primary);
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s ease;
+  }
+  .btn-hero:hover {
+    background-color: #85675b;
+  }

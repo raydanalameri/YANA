@@ -1,0 +1,456 @@
+@import url('variables.css');
+
+@import url('header.css');
+@import url('hero.css');
+@import url('footer.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+    font-size: var(--font-size-400);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+  }
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-primary);
+  }
+
+  h2 {
+    font-size: var(--font-size-900);
+  }
+
+  h3 {
+    font-size: var(--font-size-500);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Icône de chatbot en bas à droite */
+  .chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  .chatbot-icon:hover {
+    background-color: #85675b;
+  }
+
+
+
+
+  .chatbot-icon2 {
+    /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
+    width: 60px;
+    height: 60px;
+    transform: scale(3);
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.4);    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  .chatbot-icon2:hover {
+    background-color: #85675b;
+  }
+
+
+
+
+
+
+  /* Sections par défaut
+  ---------------------------------- */
+  .section-default {
+    padding: var(--spacing-6) 1rem;
+    /* margin-top: 70px;  */
+    /* compense la hauteur du header */
+    background-color: #ded2cb;
+
+    border-bottom: #85675b 1px solid;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Stats
+  ---------------------------------- */
+  .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-5);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .stats-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .stats-text h2 {
+    /* font-size: var(--font-size-700); */
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .stats-text p {
+    font-size: var(--font-size-400);
+    line-height: 1.6;
+  }
+
+  .stats-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgs {
+    max-width: 320px;
+    border-radius: var(--radius-md);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Services / Fraudes / etc.
+  ---------------------------------- */
+  .services ul,
+  .ressources ul,
+  .professionnels ul {
+    margin-top: var(--spacing-3);
+    list-style: inside disc;
+  }
+
+    /* Services 
+  ---------------------------------- */
+  #services .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-5);
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+  }
+
+
+
+  .services-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .services-text h2 {
+    /* font-size: var(--font-size-700); */
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .services-text p {
+    font-size: var(--font-size-400);
+    line-height: 1.6;
+  }
+
+
+  /*  */
+
+  .fraude-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-4);
+  }
+
+  .fraude-grid article {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text);
+  }
+
+
+
+#diagnostic {
+
+  height: 300px;
+}
+
+#diagnostic .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-5);
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+
+  .map-placeholder {
+    width: 100%;
+    height: 300px;
+    /* border: 2px dashed var(--color-primary); */
+    border-radius: var(--radius-md);
+    margin: var(--spacing-4) 0;
+  }
+
+  /* Formulaire d'alerte */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    max-width: 400px;
+  }
+
+  form label {
+    font-weight: 600;
+  }
+
+  form textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    padding: var(--spacing-3);
+  }
+
+  form button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-3);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  form button:hover {
+    background-color: #85675b;
+  }
+
+  
+  
+
+
+  /* Responsive media queries
+  ---------------------------------- */
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+    }
+    #hero h1 {
+      font-size: var(--font-size-900);
+    }
+    #hero p {
+      font-size: var(--font-size-400);
+    }
+    nav ul {
+      gap: 0.5rem;
+    }
+  }
+
+
+
+
+.fraude-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* Set a fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.fraude-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.fraude-card h3,
+.fraude-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+.fraude-card h3 {
+  color: var(--color-secondary);
+}
+
+.fraude-card:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Buttons */
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.btn, .btn-outline {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: white;
+  background-color: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+
+
+
+/* MAP */
+.map-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.map-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  z-index: 0;
+}
+
+.map-placeholder {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.map-card:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+
+
+/* Mobile Styles for the Navigation */
+@media (max-width: 768px) {
+  header {
+      padding: 10px 20px;
+  }
+
+  .nav-links {
+      display: none;
+      /* Hide nav links initially */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      /* Adjust based on your header height */
+      right: 0;
+      background: #1A1A1A;
+      /* Match your background */
+      text-align: center;
+  }
+
+  /* When active, show the nav links */
+  .nav-links.active {
+      display: flex;
+  }
+
+  /* Hamburger icon styling */
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+  }
+
+  .hamburger span {
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+}
+
+
+
+
+
